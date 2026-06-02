@@ -56,7 +56,7 @@ export default function RecruitHero() {
             <img
               src={image.src}
               alt={image.alt}
-              className={`h-full w-full object-cover object-[center_70%] md:object-center ${image.kenburns}`}
+              className={`h-full w-full object-cover object-[center_20%] md:object-center ${image.kenburns}`}
             />
           </picture>
         </div>
@@ -64,8 +64,8 @@ export default function RecruitHero() {
 
       {/* Overlay — PC: uniform / Mobile: top + bottom gradients */}
       <div className="absolute inset-0 hidden md:block bg-[#1a3a2a]/50" />
-      {/* Mobile: bottom gradient for text readability */}
-      <div className="absolute inset-0 md:hidden bg-gradient-to-t from-[#1a3a2a]/85 via-[#1a3a2a]/40 via-50% to-transparent" />
+      {/* Mobile: bottom gradient — strong lower half for text, clear upper half for faces */}
+      <div className="absolute inset-0 md:hidden bg-gradient-to-t from-[#1a3a2a]/90 via-[#1a3a2a]/50 via-55% to-transparent" />
       {/* Mobile: top gradient for header readability */}
       <div className="absolute inset-x-0 top-0 h-24 md:hidden bg-gradient-to-b from-[#1a3a2a]/60 to-transparent" />
 
