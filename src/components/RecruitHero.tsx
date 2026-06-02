@@ -56,7 +56,7 @@ export default function RecruitHero() {
             <img
               src={image.src}
               alt={image.alt}
-              className={`h-full w-full object-cover object-[center_20%] md:object-center ${image.kenburns}`}
+              className={`h-full w-full object-cover object-[center_30%] md:object-center ${image.kenburns}`}
             />
           </picture>
         </div>
