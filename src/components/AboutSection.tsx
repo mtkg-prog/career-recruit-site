@@ -1,3 +1,5 @@
+const bp = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const cards = [
   {
     number: "01",
@@ -44,13 +46,18 @@ export default function AboutSection() {
           高齢社会の課題解決に取り組んでいます。
         </p>
 
-        {/* Main visual — placeholder until image is provided */}
-        <div className="mt-12 overflow-hidden rounded-2xl bg-[#f0f4f1] md:mt-16 md:rounded-[24px]">
-          <div className="flex h-56 items-center justify-center md:h-72 lg:h-80">
-            <p className="text-sm tracking-widest text-slate-400">
-              IMAGE COMING SOON
-            </p>
-          </div>
+        {/* Main visual */}
+        <div className="mt-12 overflow-hidden rounded-2xl md:mt-16 md:rounded-[24px]">
+          <img
+            src={`${bp}/images/recruit/about/about-main-pc.png`}
+            alt="オフィスで議論する社員たち"
+            className="hidden md:block w-full h-auto"
+          />
+          <img
+            src={`${bp}/images/recruit/about/about-main-sp.png`}
+            alt="オフィスで議論する社員たち"
+            className="block md:hidden w-full h-auto"
+          />
         </div>
 
         {/* Cards */}
