@@ -18,6 +18,16 @@ body {
   color: var(--color-text);
 }
 
+.hero-image-frame {
+  top: var(--hero-mobile-top, 0);
+}
+
+@media (min-width: 768px) {
+  .hero-image-frame {
+    top: 0;
+  }
+}
+
 /* Ken Burns animations — 4 variants with different transform-origins */
 @keyframes kenburns-1 {
   0% {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, type CSSProperties } from "react";
 
 const bp = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -10,24 +10,28 @@ const heroImages = [
     srcMobile: `${bp}/images/recruit/hero-01sp.png`,
     alt: "キャリアの仕事風景 1",
     kenburns: "animate-kenburns-1",
+    mobileTop: "-13rem",
   },
   {
     src: `${bp}/images/recruit/hero-02.png`,
     srcMobile: `${bp}/images/recruit/hero-02sp.png`,
     alt: "キャリアの仕事風景 2",
     kenburns: "animate-kenburns-2",
+    mobileTop: "-18rem",
   },
   {
     src: `${bp}/images/recruit/hero-03.png`,
     srcMobile: `${bp}/images/recruit/hero-03sp.png`,
     alt: "キャリアの仕事風景 3",
     kenburns: "animate-kenburns-3",
+    mobileTop: "-23rem",
   },
   {
     src: `${bp}/images/recruit/hero-04.png`,
     srcMobile: `${bp}/images/recruit/hero-04sp.png`,
     alt: "キャリアの仕事風景 4",
     kenburns: "animate-kenburns-4",
+    mobileTop: "0px",
   },
 ];
 
@@ -51,14 +55,23 @@ export default function RecruitHero() {
             index === activeIndex ? "opacity-100" : "opacity-0"
           }`}
         >
-          <picture>
-            <source media="(max-width: 767px)" srcSet={image.srcMobile} />
-            <img
-              src={image.src}
-              alt={image.alt}
-              className={`h-full w-full object-cover object-[center_30%] md:object-center ${image.kenburns}`}
-            />
-          </picture>
+          <div
+            className="hero-image-frame absolute inset-x-0 bottom-0 md:inset-0"
+            style={
+              {
+                "--hero-mobile-top": image.mobileTop,
+              } as CSSProperties
+            }
+          >
+            <picture className="block h-full w-full">
+              <source media="(max-width: 767px)" srcSet={image.srcMobile} />
+              <img
+                src={image.src}
+                alt={image.alt}
+                className={`h-full w-full object-cover object-[center_30%] md:object-center ${image.kenburns}`}
+              />
+            </picture>
+          </div>
         </div>
       ))}
 
