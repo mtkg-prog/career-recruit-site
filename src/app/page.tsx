@@ -1,5 +1,6 @@
 import RecruitHero from "@/components/RecruitHero";
 import IssueSection from "@/components/IssueSection";
+import AboutSection from "@/components/AboutSection";
 
 /* ─── Section wrapper helpers ─── */
 function Section({
@@ -59,51 +60,8 @@ export default function Home() {
       {/* 2. 社会課題セクション */}
       <IssueSection />
 
-      {/* 3. キャリアがやっていること */}
-      <Section id="about" bg="light">
-        <SectionHeader en="ABOUT US" ja="私たちキャリアがやっていること" />
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xl font-bold leading-relaxed text-[#1a3a2a] md:text-2xl lg:text-3xl">
-            「人の力」と「仕組み」で、
-            <br />
-            高齢社会のインフラを創る。
-          </p>
-          <p className="mt-8 text-base leading-loose text-gray-600 md:text-lg">
-            株式会社キャリアは、介護・医療・シニアワーク領域において、
-            人材サービスとテクノロジーの両輪で社会課題の解決に挑んでいます。
-            人が足りない現場に人材を届け、働く人が長く活躍できる仕組みをつくる。
-            それが私たちの使命です。
-          </p>
-        </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {[
-            {
-              title: "つなぐ",
-              desc: "求職者と事業者を最適にマッチングし、人材不足の現場を支えます。",
-            },
-            {
-              title: "支える",
-              desc: "働く人のキャリア形成や定着を支援し、離職率の低下に貢献します。",
-            },
-            {
-              title: "変える",
-              desc: "テクノロジーと新しい仕組みで、業界の構造的な課題を解決します。",
-            },
-          ].map((item) => (
-            <div key={item.title} className="rounded-2xl bg-white p-8 shadow-sm">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#40916c]/10">
-                <span className="text-lg font-bold text-[#40916c]">
-                  {item.title.charAt(0)}
-                </span>
-              </div>
-              <h3 className="text-lg font-bold text-[#1a3a2a]">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                {item.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-      </Section>
+      {/* 3. ABOUT US */}
+      <AboutSection />
 
       {/* 4. 事業紹介 */}
       <Section id="services">
