@@ -62,9 +62,12 @@ export default function RecruitHero() {
         </div>
       ))}
 
-      {/* Overlay — mobile: bottom gradient / PC: uniform */}
+      {/* Overlay — PC: uniform / Mobile: top + bottom gradients */}
       <div className="absolute inset-0 hidden md:block bg-[#1a3a2a]/50" />
-      <div className="absolute inset-0 md:hidden bg-gradient-to-t from-[#1a3a2a]/80 via-[#1a3a2a]/30 via-40% to-transparent" />
+      {/* Mobile: bottom gradient for text readability */}
+      <div className="absolute inset-0 md:hidden bg-gradient-to-t from-[#1a3a2a]/85 via-[#1a3a2a]/40 via-50% to-transparent" />
+      {/* Mobile: top gradient for header readability */}
+      <div className="absolute inset-x-0 top-0 h-24 md:hidden bg-gradient-to-b from-[#1a3a2a]/60 to-transparent" />
 
       {/* Content — mobile: bottom-aligned / PC: left-aligned center */}
       <div className="relative z-10 flex h-full items-end pb-14 px-5 md:items-center md:pb-0 md:px-12 lg:px-20">
