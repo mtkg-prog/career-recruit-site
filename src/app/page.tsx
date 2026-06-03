@@ -1,6 +1,9 @@
 import RecruitHero from "@/components/RecruitHero";
 import IssueSection from "@/components/IssueSection";
 import AboutSection from "@/components/AboutSection";
+import BusinessSection from "@/components/BusinessSection";
+import JobSection from "@/components/JobSection";
+import PeopleSection from "@/components/PeopleSection";
 
 /* ─── Section wrapper helpers ─── */
 function Section({
@@ -64,130 +67,13 @@ export default function Home() {
       <AboutSection />
 
       {/* 4. 事業紹介 */}
-      <Section id="services">
-        <SectionHeader en="SERVICES" ja="事業紹介" />
-        <div className="grid gap-8 md:grid-cols-3">
-          {[
-            {
-              title: "介護人材サービス",
-              desc: "介護施設・訪問介護への人材派遣・紹介を通じて、介護現場の人手不足を解消します。経験豊富なコーディネーターが、施設と求職者の最適なマッチングを実現します。",
-              icon: "🤝",
-            },
-            {
-              title: "医療人材サービス",
-              desc: "看護師・薬剤師・医療事務など、医療機関に必要な人材をご紹介。現場のニーズを深く理解し、即戦力となる人材を迅速にお届けします。",
-              icon: "🏥",
-            },
-            {
-              title: "シニアワーク支援",
-              desc: "高齢者の豊富な経験とスキルを活かせる仕事を創出。生きがいを持って働き続けられる社会の実現に向けて、新たな雇用モデルを提案しています。",
-              icon: "💼",
-            },
-          ].map((item) => (
-            <div
-              key={item.title}
-              className="group rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
-            >
-              <span className="text-4xl">{item.icon}</span>
-              <h3 className="mt-4 text-xl font-bold text-[#1a3a2a]">
-                {item.title}
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-gray-600">
-                {item.desc}
-              </p>
-              <p className="mt-4 text-sm font-medium text-[#40916c]">
-                詳しく見る →
-              </p>
-            </div>
-          ))}
-        </div>
-      </Section>
+      <BusinessSection />
 
       {/* 5. 仕事紹介 */}
-      <Section id="jobs" bg="dark">
-        <SectionHeader en="JOBS" ja="仕事を知る" light />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            {
-              title: "営業",
-              desc: "法人クライアントの課題をヒアリングし、最適な人材ソリューションを提案します。",
-            },
-            {
-              title: "コーディネーター",
-              desc: "求職者と企業を結び、最適なマッチングを実現。双方に寄り添うキャリア支援を行います。",
-            },
-            {
-              title: "企画・マーケティング",
-              desc: "サービスの成長戦略を立案し、新規事業の企画やマーケティング施策を推進します。",
-            },
-            {
-              title: "エンジニア",
-              desc: "自社プロダクトの開発・改善を通じて、人材サービスの効率化と品質向上に貢献します。",
-            },
-          ].map((item) => (
-            <div
-              key={item.title}
-              className="rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur-sm transition-colors hover:bg-white/20"
-            >
-              <h3 className="text-lg font-bold">{item.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/80">
-                {item.desc}
-              </p>
-              <p className="mt-4 text-sm font-medium text-[#90d4aa]">
-                詳しく見る →
-              </p>
-            </div>
-          ))}
-        </div>
-      </Section>
+      <JobSection />
 
       {/* 6. 社員インタビュー */}
-      <Section id="interviews">
-        <SectionHeader en="INTERVIEWS" ja="社員インタビュー" />
-        <div className="grid gap-8 md:grid-cols-3">
-          {[
-            {
-              name: "田中 美咲",
-              role: "営業部 / 2020年入社",
-              quote:
-                "「目の前の人の課題を解決する」という実感が、毎日のやりがいにつながっています。介護施設の人手不足を解消できたとき、本当にこの仕事をやっていてよかったと思います。",
-            },
-            {
-              name: "佐藤 健太",
-              role: "コーディネーター / 2019年入社",
-              quote:
-                "求職者の方から「あなたに相談してよかった」と言ってもらえる瞬間が一番うれしい。人と人をつなぐこの仕事に、大きな誇りを感じています。",
-            },
-            {
-              name: "鈴木 亮太",
-              role: "エンジニア / 2021年入社",
-              quote:
-                "テクノロジーで社会課題を解決できるフィールドは、エンジニアとしてこの上ないやりがいです。自分のコードが現場の負担軽減に直結する実感があります。",
-            },
-          ].map((person) => (
-            <div
-              key={person.name}
-              className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm"
-            >
-              {/* Placeholder avatar */}
-              <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-[#40916c]/10">
-                <span className="text-2xl font-bold text-[#40916c]">
-                  {person.name.charAt(0)}
-                </span>
-              </div>
-              <p className="text-center text-lg font-bold text-[#1a3a2a]">
-                {person.name}
-              </p>
-              <p className="mt-1 text-center text-xs text-gray-500">
-                {person.role}
-              </p>
-              <p className="mt-4 text-sm leading-relaxed text-gray-600">
-                {person.quote}
-              </p>
-            </div>
-          ))}
-        </div>
-      </Section>
+      <PeopleSection />
 
       {/* 7. 数字で見るキャリア */}
       <Section id="numbers" bg="light">
