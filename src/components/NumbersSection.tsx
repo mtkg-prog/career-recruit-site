@@ -1,41 +1,41 @@
-// TODO: 後半3項目（STAFF / CLIENT / CAREER）を実データの具体数値に差し替え
-// 差し替え後、見出しを「数字で見るキャリア」に戻すか「データで見るキャリア」のまま維持するか検討
+// TODO: 数値データは人事担当者から共有された内容に基づく。更新が必要な場合はここを差し替える
+// TODO: Google口コミやスタッフ満足度は未確定のため、確定後に項目追加を検討する
 const numbers = [
   {
-    label: "MARKET",
-    value: "グロース市場上場",
-    description:
-      "安定した経営基盤のもと、高齢社会の課題解決に向けて成長を続けています。",
+    label: "OVERTIME",
+    value: "月14.3h",
+    title: "残業時間（平均）",
+    description: "月平均の残業時間です。",
+  },
+  {
+    label: "HOLIDAY",
+    value: "123日以上",
+    title: "年間休日",
+    description: "年間休日は123日以上です。",
+  },
+  {
+    label: "CHILDCARE",
+    value: "100%",
+    title: "育休・産休",
+    description: "育休・産休取得率です。",
+  },
+  {
+    label: "CAREER UP",
+    value: "最短半年",
+    title: "支店長になるまでのスピード",
+    description: "早期に役割を広げるチャンスがあります。",
+  },
+  {
+    label: "EMPLOYEE RATIO",
+    value: "83.7%",
+    title: "正社員割合",
+    description: "社員構成における正社員比率です。",
   },
   {
     label: "AREA",
-    value: "全国展開",
-    description:
-      "全国の介護・医療・シニアワーク領域に向き合い、地域ごとの課題解決に取り組んでいます。",
-  },
-  {
-    label: "FIELD",
-    value: "介護・医療領域に特化",
-    description:
-      "高齢社会に欠かせない領域に集中し、専門性を高めています。",
-  },
-  {
-    label: "STAFF",
-    value: "多様なキャリアフィールド", // TODO: 実データ確定後「XX万人以上」等の具体数値に差し替え
-    description:
-      "人材コーディネーター、営業、企画、DXなど、多様な職種で活躍できる環境があります。",
-  },
-  {
-    label: "CLIENT",
-    value: "地域に根ざした事業展開", // TODO: 実データ確定後「XX件以上」等の具体数値に差し替え
-    description:
-      "各地域の介護・医療現場と向き合い、地域ごとの課題解決に取り組んでいます。",
-  },
-  {
-    label: "CAREER",
-    value: "中途入社者も活躍", // TODO: 実データ確定後「XX%」等の具体数値に差し替え
-    description:
-      "異業種からの転職者も多く、多様なバックグラウンドを持つメンバーが活躍しています。",
+    value: "27拠点",
+    title: "拠点数（全国）",
+    description: "全国に拠点を展開しています。",
   },
 ];
 
@@ -73,7 +73,10 @@ export default function NumbersSection() {
               <p className="mt-4 text-3xl font-extrabold leading-tight text-white md:text-5xl">
                 {item.value}
               </p>
-              <p className="mt-4 text-sm leading-[1.8] text-white/70 md:text-base">
+              <p className="mt-3 text-sm font-bold text-white/90">
+                {item.title}
+              </p>
+              <p className="mt-2 text-sm leading-[1.8] text-white/70 md:text-base">
                 {item.description}
               </p>
             </div>

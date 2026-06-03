@@ -1,36 +1,29 @@
 import { RECRUIT_LINKS } from "@/constants/links";
 
 // TODO: 各職種に href を追加し、実際の求人詳細ページURLを設定する
+// TODO: 外部求人リンク（HRMOS / Wantedly 等）が確定したら href フィールドを有効化する
 const positions = [
   {
-    category: "CAREER SUPPORT",
-    title: "人材コーディネーター",
+    category: "SALES / COORDINATOR",
+    title: "営業職／人材コーディネーター",
     description:
-      "求職者の希望や経験を丁寧に聞き、介護・医療現場との最適なマッチングを支援する仕事です。",
+      "介護・医療領域を中心に、求職者とクライアント双方に向き合い、最適なマッチングを支援する仕事です。人材不足に悩む現場と、働きたい人をつなぎ、地域の課題解決に関わります。",
     location: "全国各拠点",
     employmentType: "正社員",
   },
   {
-    category: "SALES / BRANCH",
-    title: "営業・支店運営",
+    category: "CORPORATE",
+    title: "コーポレート",
     description:
-      "介護・医療現場の人材課題を把握し、必要な支援を提案・実行する仕事です。地域ごとの課題に向き合い、支店運営にも関わります。",
-    location: "全国各拠点",
+      "人事、総務、経理、労務、情報システムなど、会社全体の成長を支える仕事です。現場や事業部門がより良いサービスを届けられるよう、組織の土台づくりを担います。",
+    location: "本社",
     employmentType: "正社員",
   },
   {
-    category: "SENIOR WORK",
-    title: "シニアワーク担当",
+    category: "PLANNING / STRATEGY",
+    title: "経営企画・事業企画",
     description:
-      "働く意欲のあるシニアと企業・現場をつなぎ、年齢に関係なく活躍できる機会を広げる仕事です。",
-    location: "東京・各拠点",
-    employmentType: "正社員",
-  },
-  {
-    category: "PLANNING / DX",
-    title: "事業企画・新規事業",
-    description:
-      "既存事業の改善、新規事業、DX、教育支援などを通じて、高齢社会を支える仕組みをつくる仕事です。",
+      "既存事業の改善、新規事業、DX、教育支援などを通じて、高齢社会を支える仕組みをつくる仕事です。現場で得た課題を、事業や組織の進化につなげていきます。",
     location: "本社・一部リモート相談可",
     employmentType: "正社員",
   },

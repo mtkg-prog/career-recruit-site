@@ -5,8 +5,8 @@ const bp = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const jobs = [
   {
     number: "01",
-    label: "COORDINATOR",
-    role: "人材コーディネーター",
+    label: "SALES / COORDINATOR",
+    role: "営業職／人材コーディネーター",
     title: (
       <>
         働きたい人と、
@@ -14,44 +14,14 @@ const jobs = [
         必要とする現場をつなぐ。
       </>
     ),
-    body: "求職者の希望や経験をヒアリングし、介護・医療現場との最適なマッチングを支援します。一人ひとりの働き方に向き合いながら、現場の安心にもつながる仕事です。",
+    body: "求職者の希望や経験に向き合いながら、介護・医療現場の人材課題を支援します。人と現場の双方に向き合い、地域に必要な支えを届ける仕事です。",
     pcImage: `${bp}/images/recruit/jobs/job-coordinator-pc.png`,
     spImage: `${bp}/images/recruit/jobs/job-coordinator-sp.png`,
   },
   {
     number: "02",
-    label: "SALES / BRANCH",
-    role: "営業・支店運営",
-    title: (
-      <>
-        地域の介護・医療現場の
-        <br />
-        課題に向き合う。
-      </>
-    ),
-    body: "施設や医療機関の人材課題を把握し、必要な支援を提案・実行します。地域ごとのニーズに向き合い、現場を支える仕組みを広げていく仕事です。",
-    pcImage: `${bp}/images/recruit/jobs/job-sales-branch-pc.png`,
-    spImage: `${bp}/images/recruit/jobs/job-sales-branch-sp.png`,
-  },
-  {
-    number: "03",
-    label: "SENIOR WORK",
-    role: "シニアワーク担当",
-    title: (
-      <>
-        年齢に関係なく、
-        <br />
-        活躍できる機会をつくる。
-      </>
-    ),
-    body: "働く意欲のあるシニアと企業・現場をつなぎ、社会参加の機会を広げます。経験や意欲が社会の力になる場をつくる仕事です。",
-    pcImage: `${bp}/images/recruit/jobs/job-senior-work-pc.png`,
-    spImage: `${bp}/images/recruit/jobs/job-senior-work-sp.png`,
-  },
-  {
-    number: "04",
-    label: "PLANNING / DX",
-    role: "事業企画・新規事業",
+    label: "PLANNING / STRATEGY",
+    role: "経営企画・事業企画",
     title: (
       <>
         人と仕組みで、
@@ -62,6 +32,36 @@ const jobs = [
     body: "既存事業の改善、新規事業、DX、教育支援などを通じて、高齢社会に必要な仕組みをつくります。現場の課題を事業に変えていく仕事です。",
     pcImage: `${bp}/images/recruit/jobs/job-business-planning-pc.png`,
     spImage: `${bp}/images/recruit/jobs/job-business-planning-sp.png`,
+  },
+  {
+    number: "03",
+    label: "BRANCH MANAGEMENT",
+    role: "支店運営・マネジメント",
+    title: (
+      <>
+        地域の課題に向き合い、
+        <br />
+        チームで成果をつくる。
+      </>
+    ),
+    body: "支店運営やメンバー育成を通じて、地域の介護・医療現場を支える体制をつくります。チームで課題に向き合い、より大きな成果につなげる仕事です。",
+    pcImage: `${bp}/images/recruit/jobs/job-sales-branch-pc.png`,
+    spImage: `${bp}/images/recruit/jobs/job-sales-branch-sp.png`,
+  },
+  {
+    number: "04",
+    label: "CORPORATE",
+    role: "コーポレート",
+    title: (
+      <>
+        事業を支える土台を、
+        <br />
+        組織からつくる。
+      </>
+    ),
+    body: "人事、総務、経理、労務、情報システムなど、会社全体の成長を支える仕事です。現場や事業部門が力を発揮できる環境を整えます。",
+    pcImage: `${bp}/images/recruit/jobs/job-senior-work-pc.png`,
+    spImage: `${bp}/images/recruit/jobs/job-senior-work-sp.png`,
   },
 ];
 
