@@ -21,15 +21,15 @@ const people = [
     role: "営業職／人材コーディネーター",
     copy: (
       <>
-        地域の現場に入り込み、
+        年齢に関係なく働ける機会を、
         <br />
-        課題を一緒に解決する。
+        人材サービスから広げる。
       </>
     ),
-    body: "介護・医療現場の課題を聞き、必要な人材や支援を届けます。地域ごとのニーズに向き合いながら、現場を支える仕事です。",
-    pcImage: `${bp}/images/recruit/people/people-sales-pc.png`,
-    spImage: `${bp}/images/recruit/people/people-sales-sp.png`,
-    alt: "営業職／人材コーディネーターとして提案に向き合う社員",
+    body: "働きたいシニアと企業をつなぎ、社会参加の機会を広げています。経験や意欲が活きる場を増やすことが、私たちの役割です。",
+    pcImage: `${bp}/images/recruit/people/people-senior-work-pc.png`,
+    spImage: `${bp}/images/recruit/people/people-senior-work-sp.png`,
+    alt: "営業職／人材コーディネーターとして就労相談に向き合う社員",
   },
   {
     role: "営業職／人材コーディネーター",
@@ -49,15 +49,15 @@ const people = [
     role: "営業職／人材コーディネーター",
     copy: (
       <>
-        年齢に関係なく働ける機会を、
+        地域の現場に入り込み、
         <br />
-        人材サービスから広げる。
+        課題を一緒に解決する。
       </>
     ),
-    body: "働きたいシニアと企業をつなぎ、社会参加の機会を広げています。経験や意欲が活きる場を増やすことが、私たちの役割です。",
-    pcImage: `${bp}/images/recruit/people/people-senior-work-pc.png`,
-    spImage: `${bp}/images/recruit/people/people-senior-work-sp.png`,
-    alt: "営業職／人材コーディネーターとして就労相談に向き合う社員",
+    body: "介護・医療現場の課題を聞き、必要な人材や支援を届けます。地域ごとのニーズに向き合いながら、現場を支える仕事です。",
+    pcImage: `${bp}/images/recruit/people/people-sales-pc.png`,
+    spImage: `${bp}/images/recruit/people/people-sales-sp.png`,
+    alt: "営業職／人材コーディネーターとして提案に向き合う社員",
   },
 ];
 

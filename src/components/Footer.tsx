@@ -1,6 +1,7 @@
 // TODO: 会社情報リンク・お問い合わせリンク・住所・TELは実URL・実データ確定後に追加
 const footerNavLinks = [
   { label: "募集職種", href: "#positions" },
+  { label: "動画で知る", href: "#movie" },
   { label: "社員インタビュー", href: "#people" },
   { label: "よくある質問", href: "#faq" },
 ];

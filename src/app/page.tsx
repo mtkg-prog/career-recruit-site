@@ -1,6 +1,7 @@
 import RecruitHero from "@/components/RecruitHero";
 import IssueSection from "@/components/IssueSection";
 import AboutSection from "@/components/AboutSection";
+import MovieSection from "@/components/MovieSection";
 import BusinessSection from "@/components/BusinessSection";
 import JobSection from "@/components/JobSection";
 import PeopleSection from "@/components/PeopleSection";
@@ -24,7 +25,10 @@ export default function Home() {
       {/* 3. ABOUT US */}
       <AboutSection />
 
-      {/* 4. 事業紹介 */}
+      {/* 4. 動画セクション */}
+      <MovieSection />
+
+      {/* 5. 事業紹介 */}
       <BusinessSection />
 
       {/* 5. 仕事紹介 */}

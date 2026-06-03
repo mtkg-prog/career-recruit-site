@@ -5,34 +5,35 @@ import { RECRUIT_LINKS } from "@/constants/links";
 
 const bp = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
+// TODO: hero-01（介護現場風の画像）は企業イメージとのギャップがあるため、Hero画像差し替え候補。ビジネス寄りの画像が用意でき次第入れ替える
 const heroImages = [
   {
-    src: `${bp}/images/recruit/hero-01.png`,
-    srcMobile: `${bp}/images/recruit/hero-01sp.png`,
+    src: `${bp}/images/recruit/hero-04.png`,
+    srcMobile: `${bp}/images/recruit/hero-04sp.png`,
     alt: "キャリアの仕事風景 1",
     kenburns: "animate-kenburns-1",
-    mobileTop: "-13rem",
-  },
-  {
-    src: `${bp}/images/recruit/hero-02.png`,
-    srcMobile: `${bp}/images/recruit/hero-02sp.png`,
-    alt: "キャリアの仕事風景 2",
-    kenburns: "animate-kenburns-2",
-    mobileTop: "-18rem",
+    mobileTop: "-5rem",
   },
   {
     src: `${bp}/images/recruit/hero-03.png`,
     srcMobile: `${bp}/images/recruit/hero-03sp.png`,
-    alt: "キャリアの仕事風景 3",
-    kenburns: "animate-kenburns-3",
+    alt: "キャリアの仕事風景 2",
+    kenburns: "animate-kenburns-2",
     mobileTop: "-23rem",
   },
   {
-    src: `${bp}/images/recruit/hero-04.png`,
-    srcMobile: `${bp}/images/recruit/hero-04sp.png`,
+    src: `${bp}/images/recruit/hero-02.png`,
+    srcMobile: `${bp}/images/recruit/hero-02sp.png`,
+    alt: "キャリアの仕事風景 3",
+    kenburns: "animate-kenburns-3",
+    mobileTop: "-18rem",
+  },
+  {
+    src: `${bp}/images/recruit/hero-01.png`,
+    srcMobile: `${bp}/images/recruit/hero-01sp.png`,
     alt: "キャリアの仕事風景 4",
     kenburns: "animate-kenburns-4",
-    mobileTop: "-5rem",
+    mobileTop: "-13rem",
   },
 ];
 
