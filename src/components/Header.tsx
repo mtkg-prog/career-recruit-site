@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 const navLinks = [
   { label: "会社を知る", href: "#about" },
   { label: "仕事を知る", href: "#jobs" },
-  { label: "人を知る", href: "#interviews" },
+  { label: "人を知る", href: "#people" },
   { label: "募集職種", href: "#positions" },
   { label: "FAQ", href: "#faq" },
 ];
@@ -18,6 +18,7 @@ export default function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 80);
     };
+    handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -33,7 +34,7 @@ export default function Header() {
       <div className="mx-auto max-w-6xl flex items-center justify-between px-4 py-4 lg:px-8">
         {/* Logo */}
         <a
-          href="#"
+          href="#hero"
           className={`text-lg font-bold tracking-wide transition-colors duration-300 ${
             isScrolled || isOpen ? "text-[#1a3a2a]" : "text-white"
           }`}

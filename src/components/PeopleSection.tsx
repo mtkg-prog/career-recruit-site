@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const bp = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const people = [
@@ -91,15 +93,19 @@ export default function PeopleSection() {
             >
               {/* Image */}
               <div className="relative h-56 bg-gradient-to-br from-[#dceae2] to-[#c5ddd0] md:h-72">
-                <img
+                <Image
                   src={person.spImage}
                   alt={person.alt}
-                  className="absolute inset-0 h-full w-full object-cover md:hidden"
+                  fill
+                  sizes="(min-width: 768px) 0px, 100vw"
+                  className="object-cover md:hidden"
                 />
-                <img
+                <Image
                   src={person.pcImage}
                   alt={person.alt}
-                  className="absolute inset-0 hidden h-full w-full object-cover md:block"
+                  fill
+                  sizes="(min-width: 768px) 50vw, 0px"
+                  className="hidden object-cover md:block"
                 />
               </div>
 

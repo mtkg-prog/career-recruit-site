@@ -1,7 +1,7 @@
 export default function IssueSection() {
   return (
     <section
-      id="social-issues"
+      id="issue"
       className="bg-[#f8faf7] px-5 pt-16 pb-16 md:px-8 md:pt-28 md:pb-24"
     >
       <div className="mx-auto max-w-6xl">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, type CSSProperties } from "react";
+import { RECRUIT_LINKS } from "@/constants/links";
 
 const bp = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -31,49 +32,61 @@ const heroImages = [
     srcMobile: `${bp}/images/recruit/hero-04sp.png`,
     alt: "キャリアの仕事風景 4",
     kenburns: "animate-kenburns-4",
-    mobileTop: "0px",
+    mobileTop: "-5rem",
   },
 ];
 
 export default function RecruitHero() {
   const [activeIndex, setActiveIndex] = useState(0);
+  // Track which slides have been shown so they stay in DOM after first display
+  const [loadedSlides, setLoadedSlides] = useState<Set<number>>(new Set([0]));
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % heroImages.length);
+      setActiveIndex((prev) => {
+        const next = (prev + 1) % heroImages.length;
+        setLoadedSlides((s) => new Set(s).add(next));
+        return next;
+      });
     }, 5000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="relative h-[70vh] md:h-[85vh] lg:h-screen w-full overflow-hidden">
-      {/* Image layers — <picture> switches src between mobile / desktop */}
-      {heroImages.map((image, index) => (
-        <div
-          key={image.src}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-            index === activeIndex ? "opacity-100" : "opacity-0"
-          }`}
-        >
+    <section id="hero" className="relative h-[70vh] md:h-[85vh] lg:h-screen w-full overflow-hidden">
+      {/* Image layers — only render slides that have been activated */}
+      {heroImages.map((image, index) => {
+        if (!loadedSlides.has(index)) return null;
+        const isFirst = index === 0;
+        return (
           <div
-            className="hero-image-frame absolute inset-x-0 bottom-0 md:inset-0"
-            style={
-              {
-                "--hero-mobile-top": image.mobileTop,
-              } as CSSProperties
-            }
+            key={image.src}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              index === activeIndex ? "opacity-100" : "opacity-0"
+            }`}
           >
-            <picture className="block h-full w-full">
-              <source media="(max-width: 767px)" srcSet={image.srcMobile} />
-              <img
-                src={image.src}
-                alt={image.alt}
-                className={`h-full w-full object-cover object-[center_30%] md:object-center ${image.kenburns}`}
-              />
-            </picture>
+            <div
+              className="hero-image-frame absolute inset-x-0 bottom-0 md:inset-0"
+              style={
+                {
+                  "--hero-mobile-top": image.mobileTop,
+                } as CSSProperties
+              }
+            >
+              <picture className="block h-full w-full">
+                <source media="(max-width: 767px)" srcSet={image.srcMobile} />
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  loading={isFirst ? "eager" : "lazy"}
+                  fetchPriority={isFirst ? "high" : "auto"}
+                  className={`h-full w-full object-cover object-[center_30%] md:object-center ${image.kenburns}`}
+                />
+              </picture>
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
 
       {/* Overlay — PC: uniform / Mobile: top + bottom gradients */}
       <div className="absolute inset-0 hidden md:block bg-[#1a3a2a]/50" />
@@ -107,13 +120,13 @@ export default function RecruitHero() {
           {/* CTA */}
           <div className="mt-6 flex flex-col gap-2.5 sm:flex-row md:mt-10">
             <a
-              href="#positions"
+              href={RECRUIT_LINKS.positions}
               className="rounded-full bg-[#40916c] px-6 py-3 text-center text-sm font-medium text-white transition-colors hover:bg-[#358a60]"
             >
               募集職種を見る
             </a>
             <a
-              href="#final-cta"
+              href={RECRUIT_LINKS.casualInterview}
               className="rounded-full border border-white/60 px-6 py-3 text-center text-sm font-medium text-white/90 transition-colors hover:bg-white/15"
             >
               カジュアル面談を申し込む

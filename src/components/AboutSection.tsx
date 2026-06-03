@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const bp = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const cards = [
@@ -48,16 +50,24 @@ export default function AboutSection() {
 
         {/* Main visual */}
         <div className="mt-12 overflow-hidden rounded-2xl md:mt-16 md:rounded-[24px]">
-          <img
-            src={`${bp}/images/recruit/about/about-main-pc.png`}
-            alt="オフィスで議論する社員たち"
-            className="hidden md:block w-full h-auto"
-          />
-          <img
-            src={`${bp}/images/recruit/about/about-main-sp.png`}
-            alt="オフィスで議論する社員たち"
-            className="block md:hidden w-full h-auto"
-          />
+          <div className="relative hidden md:block" style={{ aspectRatio: "16/9" }}>
+            <Image
+              src={`${bp}/images/recruit/about/about-main-pc.png`}
+              alt="オフィスで議論する社員たち"
+              fill
+              sizes="(min-width: 1152px) 1152px, 100vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="relative block md:hidden" style={{ aspectRatio: "4/3" }}>
+            <Image
+              src={`${bp}/images/recruit/about/about-main-sp.png`}
+              alt="オフィスで議論する社員たち"
+              fill
+              sizes="100vw"
+              className="object-cover"
+            />
+          </div>
         </div>
 
         {/* Cards */}
@@ -65,7 +75,7 @@ export default function AboutSection() {
           {cards.map((card) => (
             <div
               key={card.number}
-              className="rounded-xl border border-gray-200 bg-white p-6 transition-shadow hover:shadow-md md:p-8"
+              className="rounded-[24px] border border-gray-200 bg-white p-6 transition-shadow hover:shadow-md md:p-8"
             >
               <div className="flex items-center gap-3">
                 <span className="text-xs font-bold tabular-nums text-[#40916c]">

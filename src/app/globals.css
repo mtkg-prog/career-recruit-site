@@ -5,7 +5,7 @@
   --color-primary-light: #2d6a4f;
   --color-accent: #40916c;
   --color-accent-hover: #358a60;
-  --color-bg-light: #f8faf9;
+  --color-bg-light: #f8faf7;
   --color-text: #1a1a1a;
 }
 
@@ -16,6 +16,11 @@
 body {
   background: #ffffff;
   color: var(--color-text);
+}
+
+/* Sticky header offset for anchor navigation */
+section[id] {
+  scroll-margin-top: 4rem;
 }
 
 .hero-image-frame {
@@ -76,16 +81,4 @@ body {
 }
 .animate-kenburns-4 {
   animation: kenburns-4 20s ease-in-out infinite alternate;
-}
-
-/* FAQ accordion styling */
-details summary {
-  cursor: pointer;
-  list-style: none;
-}
-details summary::-webkit-details-marker {
-  display: none;
-}
-details[open] summary .faq-icon {
-  transform: rotate(45deg);
 }

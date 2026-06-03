@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const bp = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const jobs = [
@@ -65,7 +67,7 @@ const jobs = [
 
 export default function JobSection() {
   return (
-    <section id="jobs" className="bg-[#f8faf9] px-5 py-24 md:px-8 md:py-32">
+    <section id="jobs" className="bg-[#f8faf7] px-5 py-24 md:px-8 md:py-32">
       <div className="mx-auto max-w-6xl">
         {/* Eyebrow */}
         <p className="text-xs font-semibold tracking-[0.25em] text-[#40916c] md:text-sm">
@@ -97,15 +99,19 @@ export default function JobSection() {
             >
               {/* Image */}
               <div className="relative h-48 bg-gradient-to-br from-[#e8f0ec] to-[#d4e4db] md:h-64">
-                <img
+                <Image
                   src={job.spImage}
                   alt={job.role}
-                  className="absolute inset-0 h-full w-full object-cover md:hidden"
+                  fill
+                  sizes="(min-width: 768px) 0px, 100vw"
+                  className="object-cover md:hidden"
                 />
-                <img
+                <Image
                   src={job.pcImage}
                   alt={job.role}
-                  className="absolute inset-0 hidden h-full w-full object-cover md:block"
+                  fill
+                  sizes="(min-width: 768px) 50vw, 0px"
+                  className="hidden object-cover md:block"
                 />
               </div>
 
