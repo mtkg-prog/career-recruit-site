@@ -34,3 +34,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+### Required Environment Variables
+
+Vercel の Settings > Environment Variables で以下を設定してください。`.env.example` も参照してください。
+
+| Variable | Purpose | Example |
+|---|---|---|
+| `NEXT_PUBLIC_SITE_URL` | OGP画像・canonical URL の生成に使用。未設定だと og:image が localhost を指す | `https://recruit.example.com` |
+| `NEXT_PUBLIC_CASUAL_INTERVIEW_URL` | カジュアル面談CTAのリンク先。未設定だとページ内スクロールのみ | `https://example.com/form` |
