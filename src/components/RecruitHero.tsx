@@ -6,6 +6,7 @@ import { RECRUIT_LINKS } from "@/constants/links";
 const bp = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 // TODO: hero-01（介護現場風の画像）は企業イメージとのギャップがあるため、Hero画像差し替え候補。ビジネス寄りの画像が用意でき次第入れ替える
+// TODO: slide 3（hero-02sp）はスマホ用画像の再生成候補。再生成する場合は「顔が中央に来ない」「上部に文字を載せる余白を確保」を意識する
 const heroImages = [
   {
     src: `${bp}/images/recruit/hero-04.png`,
@@ -13,6 +14,7 @@ const heroImages = [
     alt: "キャリアの仕事風景 1",
     kenburns: "animate-kenburns-1",
     mobileTop: "-5rem",
+    mobileObjectPosition: "center 30%",
   },
   {
     src: `${bp}/images/recruit/hero-03.png`,
@@ -20,13 +22,15 @@ const heroImages = [
     alt: "キャリアの仕事風景 2",
     kenburns: "animate-kenburns-2",
     mobileTop: "-23rem",
+    mobileObjectPosition: "center 30%",
   },
   {
     src: `${bp}/images/recruit/hero-02.png`,
     srcMobile: `${bp}/images/recruit/hero-02sp.png`,
     alt: "キャリアの仕事風景 3",
     kenburns: "animate-kenburns-3",
-    mobileTop: "-5rem",
+    mobileTop: "0rem",
+    mobileObjectPosition: "center 15%",
   },
   {
     src: `${bp}/images/recruit/hero-01.png`,
@@ -34,6 +38,7 @@ const heroImages = [
     alt: "キャリアの仕事風景 4",
     kenburns: "animate-kenburns-4",
     mobileTop: "-13rem",
+    mobileObjectPosition: "center 30%",
   },
 ];
 
@@ -71,6 +76,7 @@ export default function RecruitHero() {
               style={
                 {
                   "--hero-mobile-top": image.mobileTop,
+                  "--hero-mobile-obj": image.mobileObjectPosition,
                 } as CSSProperties
               }
             >
@@ -81,7 +87,7 @@ export default function RecruitHero() {
                   alt={image.alt}
                   loading={isFirst ? "eager" : "lazy"}
                   fetchPriority={isFirst ? "high" : "auto"}
-                  className={`h-full w-full object-cover object-[center_30%] md:object-center ${image.kenburns}`}
+                  className={`h-full w-full object-cover hero-image-obj md:object-center ${image.kenburns}`}
                 />
               </picture>
             </div>

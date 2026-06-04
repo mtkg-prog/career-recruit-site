@@ -27,6 +27,10 @@ section[id] {
   top: var(--hero-mobile-top, 0);
 }
 
+.hero-image-obj {
+  object-position: var(--hero-mobile-obj, center 30%);
+}
+
 @media (min-width: 768px) {
   .hero-image-frame {
     top: 0;
