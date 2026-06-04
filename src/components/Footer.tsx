@@ -41,9 +41,8 @@ export default function Footer() {
           </nav>
         </div>
 
-        {/* 社外広報 */}
-        <div className="mt-8 flex flex-col items-center gap-3 md:flex-row md:justify-between">
-          <p className="text-xs tracking-[0.15em] text-white/50">社外広報</p>
+        {/* SNSリンク */}
+        <div className="mt-8 flex justify-center">
           <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
             {socialLinks.map((link) => (
               <a
