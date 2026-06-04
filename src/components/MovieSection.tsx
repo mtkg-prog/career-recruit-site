@@ -1,9 +1,14 @@
-// TODO: YouTube URL は仮（参考動画）。正式な自社採用動画URLが決まり次第差し替える
-// TODO: Hero背景動画化は将来検討。現時点ではMovieSectionとしてYouTubeリンクを設置
-const YOUTUBE_URL =
-  "https://youtu.be/4r6ZqwyphD0?si=h1_k_g_hUuNQQzgV";
+// TODO: YouTube URL は仮（参考動画）。正式な自社採用動画URLが決まり次第、EMBED_URL を差し替える
+"use client";
+
+import { useState } from "react";
+
+const EMBED_URL =
+  "https://www.youtube.com/embed/4r6ZqwyphD0?autoplay=1&rel=0";
 
 export default function MovieSection() {
+  const [isPlaying, setIsPlaying] = useState(false);
+
   return (
     <section id="movie" className="bg-[#f8faf7] px-5 py-24 md:px-8 md:py-32">
       <div className="mx-auto max-w-6xl">
@@ -27,56 +32,64 @@ export default function MovieSection() {
         </p>
 
         {/* Video card */}
-        <a
-          href={YOUTUBE_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="ブランドムービーをYouTubeで再生する"
-          className="group mt-12 block overflow-hidden rounded-[28px] bg-[#073B34] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#40916c] md:mt-16"
-        >
+        <div className="mt-12 overflow-hidden rounded-[28px] bg-[#073B34] md:mt-16">
           <div className="relative aspect-video w-full">
-            {/* Play button & text overlay */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-5">
-              {/* Play icon */}
-              <div className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/80 transition-transform group-hover:scale-110 md:h-20 md:w-20">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="ml-1 h-6 w-6 text-white md:h-8 md:w-8"
-                  aria-hidden="true"
-                >
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
+            {isPlaying ? (
+              <iframe
+                src={EMBED_URL}
+                title="株式会社キャリア 採用動画"
+                className="absolute inset-0 h-full w-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            ) : (
+              <button
+                type="button"
+                onClick={() => setIsPlaying(true)}
+                aria-label="採用動画を再生する"
+                className="group absolute inset-0 flex h-full w-full flex-col items-center justify-center px-5 text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#40916c]"
+              >
+                {/* Play icon */}
+                <div className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/80 transition-transform group-hover:scale-110 md:h-20 md:w-20">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="ml-1 h-6 w-6 text-white md:h-8 md:w-8"
+                    aria-hidden="true"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
 
-              {/* Label */}
-              <p className="mt-5 text-[0.65rem] font-semibold tracking-[0.25em] text-white/50 md:text-xs">
-                BRAND MOVIE
-              </p>
+                {/* Label */}
+                <p className="mt-5 text-[0.65rem] font-semibold tracking-[0.25em] text-white/50 md:text-xs">
+                  BRAND MOVIE
+                </p>
 
-              {/* Title */}
-              <p className="mt-2 text-lg font-bold text-white md:text-2xl">
-                キャリアで働くということ
-              </p>
+                {/* Title */}
+                <p className="mt-2 text-lg font-bold text-white md:text-2xl">
+                  キャリアで働くということ
+                </p>
 
-              {/* Subtitle */}
-              <p className="mt-1 text-xs text-white/60 md:text-sm">
-                高齢社会の未来を変える仕事を、動画で見る。
-              </p>
+                {/* Subtitle */}
+                <p className="mt-1 text-xs text-white/60 md:text-sm">
+                  高齢社会の未来を変える仕事を、動画で見る。
+                </p>
 
-              {/* CTA */}
-              <p className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#40916c] transition-colors group-hover:text-[#52b788] md:text-base">
-                動画を見る
-                <span
-                  aria-hidden="true"
-                  className="transition-transform group-hover:translate-x-0.5"
-                >
-                  →
-                </span>
-              </p>
-            </div>
+                {/* CTA */}
+                <p className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#40916c] transition-colors group-hover:text-[#52b788] md:text-base">
+                  動画を見る
+                  <span
+                    aria-hidden="true"
+                    className="transition-transform group-hover:translate-x-0.5"
+                  >
+                    →
+                  </span>
+                </p>
+              </button>
+            )}
           </div>
-        </a>
+        </div>
       </div>
     </section>
   );
