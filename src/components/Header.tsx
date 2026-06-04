@@ -59,7 +59,7 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="#final-cta"
+            href="#positions"
             className="rounded-full bg-[#40916c] px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-[#358a60]"
           >
             エントリー
@@ -113,7 +113,7 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="#final-cta"
+            href="#positions"
             onClick={() => setIsOpen(false)}
             className="mt-4 rounded-full bg-[#40916c] px-5 py-3 text-center text-sm font-medium text-white transition-colors hover:bg-[#358a60]"
           >
