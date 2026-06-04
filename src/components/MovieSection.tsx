@@ -4,7 +4,7 @@ import { useState } from "react";
 
 // TODO: YouTube URL は仮（参考動画）。正式な自社採用動画URLが決まり次第、VIDEO_ID を差し替える
 const VIDEO_ID = "4r6ZqwyphD0";
-const THUMBNAIL_URL = `https://img.youtube.com/vi/${VIDEO_ID}/maxresdefault.jpg`;
+const THUMBNAIL_URL = `https://img.youtube.com/vi/${VIDEO_ID}/hqdefault.jpg`;
 const EMBED_URL = `https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1&rel=0&modestbranding=1`;
 
 export default function MovieSection() {
