@@ -10,7 +10,7 @@ const heroImages = [
   {
     src: `${bp}/images/recruit/hero-04.png`,
     srcMobile: `${bp}/images/recruit/hero-04sp.png`,
-    alt: "キャリアの仕事風景 1",
+    alt: "",
     kenburns: "animate-kenburns-1",
     mobileTop: "-5rem",
     mobileObjectPosition: "center 30%",
@@ -18,7 +18,7 @@ const heroImages = [
   {
     src: `${bp}/images/recruit/hero-03.png`,
     srcMobile: `${bp}/images/recruit/hero-03sp.png`,
-    alt: "キャリアの仕事風景 2",
+    alt: "",
     kenburns: "animate-kenburns-2",
     mobileTop: "-23rem",
     mobileObjectPosition: "center 30%",
@@ -26,7 +26,7 @@ const heroImages = [
   {
     src: `${bp}/images/recruit/hero-02.png`,
     srcMobile: `${bp}/images/recruit/hero-02sp.png`,
-    alt: "キャリアの仕事風景 3",
+    alt: "",
     kenburns: "animate-kenburns-3",
     mobileTop: "-20rem",
     mobileObjectPosition: "center 50%",
@@ -34,7 +34,7 @@ const heroImages = [
   {
     src: `${bp}/images/recruit/hero-01.png`,
     srcMobile: `${bp}/images/recruit/hero-01sp.png`,
-    alt: "キャリアの仕事風景 4",
+    alt: "",
     kenburns: "animate-kenburns-4",
     mobileTop: "-13rem",
     mobileObjectPosition: "center 30%",
@@ -144,18 +144,22 @@ export default function RecruitHero() {
       </div>
 
       {/* Slide indicators */}
-      <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-2 md:bottom-8">
+      <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 items-center md:bottom-8">
         {heroImages.map((_, index) => (
           <button
             key={index}
             onClick={() => setActiveIndex(index)}
-            className={`h-2 rounded-full transition-all duration-500 ${
-              index === activeIndex
-                ? "w-8 bg-white"
-                : "w-2 bg-white/50"
-            }`}
+            className="flex h-11 w-11 items-center justify-center"
             aria-label={`スライド ${index + 1}`}
-          />
+          >
+            <span
+              className={`block h-2 rounded-full transition-all duration-500 ${
+                index === activeIndex
+                  ? "w-8 bg-white"
+                  : "w-2 bg-white/50"
+              }`}
+            />
+          </button>
         ))}
       </div>
     </section>

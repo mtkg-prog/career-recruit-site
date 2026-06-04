@@ -72,7 +72,9 @@ export default function Header() {
           className={`lg:hidden flex flex-col gap-1.5 p-2 transition-colors ${
             isScrolled || isOpen ? "text-[#1a3a2a]" : "text-white"
           }`}
-          aria-label="メニューを開く"
+          aria-label={isOpen ? "メニューを閉じる" : "メニューを開く"}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
         >
           <span
             className={`block h-0.5 w-6 bg-current transition-transform duration-300 ${
@@ -94,6 +96,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       <div
+        id="mobile-menu"
         className={`lg:hidden overflow-hidden transition-all duration-300 bg-white ${
           isOpen ? "max-h-96" : "max-h-0"
         }`}

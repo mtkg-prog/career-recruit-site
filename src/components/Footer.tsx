@@ -44,14 +44,14 @@ export default function Footer() {
         {/* 社外広報 */}
         <div className="mt-8 flex flex-col items-center gap-3 md:flex-row md:justify-between">
           <p className="text-xs tracking-[0.15em] text-white/50">社外広報</p>
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
             {socialLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-white/60 transition-colors hover:text-white"
+                className="inline-flex min-h-10 items-center px-2 text-sm text-white/60 transition-colors hover:text-white"
               >
                 {link.label}
               </a>

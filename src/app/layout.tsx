@@ -14,7 +14,15 @@ const notoSansJP = Noto_Sans_JP({
 //
 // 本番デプロイ時は Vercel の環境変数に NEXT_PUBLIC_SITE_URL を必ず設定すること。
 // 未設定の場合 og:image 等が localhost を指し、SNS共有時に画像が表示されない。
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const siteUrl = (() => {
+  const url = process.env.NEXT_PUBLIC_SITE_URL;
+  if (!url && (process.env.VERCEL || process.env.CI)) {
+    throw new Error(
+      "NEXT_PUBLIC_SITE_URL is required for deployment. Set it in your environment variables."
+    );
+  }
+  return url ?? "http://localhost:3000";
+})();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
