@@ -3,7 +3,6 @@ import IssueSection from "@/components/IssueSection";
 import AboutSection from "@/components/AboutSection";
 import MovieSection from "@/components/MovieSection";
 import BusinessSection from "@/components/BusinessSection";
-import JobSection from "@/components/JobSection";
 import PeopleSection from "@/components/PeopleSection";
 import NumbersSection from "@/components/NumbersSection";
 import CultureSection from "@/components/CultureSection";
@@ -32,31 +31,28 @@ export default function Home() {
       {/* 5. 事業紹介 */}
       <BusinessSection />
 
-      {/* 6. 仕事紹介 */}
-      <JobSection />
-
-      {/* 7. 社員インタビュー */}
+      {/* 6. 社員インタビュー */}
       <PeopleSection />
 
-      {/* 8. 数字で見るキャリア */}
+      {/* 7. 数字で見るキャリア */}
       <NumbersSection />
 
-      {/* 9. カルチャー */}
+      {/* 8. カルチャー */}
       <CultureSection />
 
-      {/* 10. キャリアパス */}
+      {/* 9. キャリアパス */}
       <CareerPathSection />
 
-      {/* 11. 募集職種 */}
+      {/* 10. 募集職種 */}
       <PositionsSection />
 
-      {/* 12. メディア（応募検討後の「もっと知る」導線） */}
+      {/* 11. メディア（応募検討後の「もっと知る」導線） */}
       <MediaSection />
 
-      {/* 13. FAQ */}
+      {/* 12. FAQ */}
       <FAQSection />
 
-      {/* 14. 最終CTA */}
+      {/* 13. 最終CTA */}
       <FinalCTASection />
     </>
   );

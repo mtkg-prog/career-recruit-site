@@ -79,9 +79,9 @@ export default function PeopleSection() {
 
         {/* Lead */}
         <p className="mt-6 max-w-3xl text-base leading-[2] text-slate-700 md:mt-8 md:text-lg">
-          キャリアで働く人たちは、求職者、現場、事業、仕組みに向き合いながら、
+          営業、人材コーディネート、企画、コーポレート。
           <br className="hidden md:block" />
-          それぞれの立場で高齢社会の課題解決に挑んでいます。
+          キャリアで働く人たちは、それぞれの立場から高齢社会の課題に向き合っています。
         </p>
 
         {/* Cards */}

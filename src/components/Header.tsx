@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 const navLinks = [
   { label: "会社を知る", href: "#about" },
-  { label: "仕事を知る", href: "#jobs" },
+  { label: "仕事を知る", href: "#business" },
   { label: "人を知る", href: "#people" },
   { label: "募集職種", href: "#positions" },
   { label: "FAQ", href: "#faq" },

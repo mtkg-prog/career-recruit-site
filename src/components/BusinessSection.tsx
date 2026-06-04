@@ -4,48 +4,52 @@ const cards = [
     label: "SENIOR CARE",
     title: (
       <>
-        介護・医療現場に、
+        介護・医療領域の
         <br />
-        必要な人材を届ける。
+        人材支援
       </>
     ),
-    body: "看護師・介護士を中心とした人材サービスを通じて、人手不足に悩む介護・医療現場を支えています。",
+    body: "介護施設や医療機関の人材課題に向き合い、働きたい人と必要とする現場をつなぎます。求職者とクライアント双方に向き合い、地域の安心を支える事業です。",
+    tags: ["人材派遣", "人材紹介", "マッチング支援"],
   },
   {
     number: "02",
     label: "SENIOR WORK",
     title: (
       <>
-        年齢に関係なく、
+        シニアの
         <br />
-        働ける機会を広げる。
+        就労支援
       </>
     ),
-    body: "働く意欲のあるシニアと、担い手を必要とする現場をつなぎ、経験や意欲が社会で活きる仕組みを広げています。",
+    body: "年齢に関係なく働ける機会を広げるため、働きたいシニアと企業・地域をつなぎます。経験や意欲が社会の中で活きる場を増やしていく事業です。",
+    tags: ["就労支援", "社会参加", "地域課題"],
   },
   {
     number: "03",
     label: "EDUCATION",
     title: (
       <>
-        未経験から、
+        教育・
         <br />
-        支える人を増やす。
+        研修事業
       </>
     ),
-    body: "介護職員初任者研修などの教育支援を通じて、高齢社会を支える新しい人材の入口をつくっています。",
+    body: "介護職員初任者研修などを通じて、未経験から介護・福祉領域に踏み出す人を支援します。人材不足の解決だけでなく、現場で活躍できる人を育てる事業です。",
+    tags: ["資格取得支援", "研修", "人材育成"],
   },
   {
     number: "04",
     label: "NEW BUSINESS / DX",
     title: (
       <>
-        人と仕組みで、
+        新規事業・
         <br />
-        課題解決を進化させる。
+        DX
       </>
     ),
-    body: "人材・教育・現場支援の仕組みをテクノロジーで進化させ、高齢社会に必要な新しい事業づくりに挑んでいます。",
+    body: "現場で見えてきた課題をもとに、新しいサービスや仕組みづくりに挑戦しています。人の力だけに頼るのではなく、テクノロジーや事業開発を通じて課題解決を進化させます。",
+    tags: ["事業企画", "DX", "仕組みづくり"],
   },
 ];
 
@@ -62,16 +66,16 @@ export default function BusinessSection() {
         <h2 className="mt-4 text-3xl font-extrabold leading-[1.35] text-[#073B34] md:mt-5 md:text-6xl">
           高齢社会を支える、
           <br />
-          複数の事業フィールド。
+          キャリアの事業。
         </h2>
 
         {/* Lead */}
         <p className="mt-6 max-w-3xl text-base leading-[2] text-slate-700 md:mt-8 md:text-lg">
-          キャリアが向き合う課題は、一つではありません。
+          キャリアは、介護・医療・シニア領域を中心に、
           <br className="hidden md:block" />
-          介護・医療現場の人材不足、シニアの就労機会、未経験者の教育、そして新しい仕組みづくり。
+          人材サービス、就労支援、教育、事業開発を通じて、
           <br className="hidden md:block" />
-          複数の事業を通じて、高齢社会に必要な支えを広げています。
+          高齢社会に必要な仕組みを広げています。
         </p>
 
         {/* Cards */}
@@ -93,9 +97,26 @@ export default function BusinessSection() {
               <p className="mt-3 text-sm leading-[1.9] text-[#4b5563] md:text-base">
                 {card.body}
               </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {card.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full bg-[#e8f0ec] px-3 py-1 text-xs font-medium text-[#40916c]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>
+
+        {/* Bridge to People */}
+        <p className="mx-auto mt-14 max-w-2xl text-center text-sm leading-[2] text-slate-500 md:mt-16 md:text-base">
+          事業の最前線から、組織を支える本部機能、仕組みをつくる企画職まで。
+          <br className="hidden md:block" />
+          それぞれの役割が、高齢社会の未来を前に進めています。
+        </p>
       </div>
     </section>
   );
