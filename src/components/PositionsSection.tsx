@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { RECRUIT_LINKS } from "@/constants/links";
 
 // TODO: 各職種に href を追加し、実際の求人詳細ページURLを設定する
@@ -109,10 +110,85 @@ export default function PositionsSection() {
             </a>
             <a
               href={RECRUIT_LINKS.casualInterview}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full rounded-full border-2 border-[#40916c] px-8 py-4 text-center text-base font-medium text-[#40916c] transition-colors hover:bg-[#40916c] hover:text-white sm:w-auto"
             >
               カジュアル面談を申し込む
             </a>
+          </div>
+
+          {/* エントリーCTA */}
+          <div className="mt-12 border-t border-gray-200 pt-12">
+            <h3 className="text-lg font-bold text-[#073B34] md:text-xl">
+              エントリーはこちら
+            </h3>
+            <div className="mt-6 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <a
+                href={RECRUIT_LINKS.entry2027}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full rounded-full bg-[#40916c] px-8 py-4 text-center text-base font-medium text-white transition-colors hover:bg-[#358a60] sm:w-auto"
+              >
+                2027卒エントリー
+              </a>
+              <a
+                href={RECRUIT_LINKS.entryMidCareer}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full rounded-full bg-[#40916c] px-8 py-4 text-center text-base font-medium text-white transition-colors hover:bg-[#358a60] sm:w-auto"
+              >
+                中途採用エントリー
+              </a>
+              <a
+                href={RECRUIT_LINKS.casualInterview}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full rounded-full border-2 border-[#40916c] px-8 py-4 text-center text-base font-medium text-[#40916c] transition-colors hover:bg-[#40916c] hover:text-white sm:w-auto"
+              >
+                カジュアル面談を申し込む
+              </a>
+            </div>
+          </div>
+
+          {/* マイナビバナー */}
+          <div className="mt-12 border-t border-gray-200 pt-12">
+            <h3 className="text-lg font-bold text-[#073B34] md:text-xl">
+              新卒採用はこちら
+            </h3>
+            <p className="mt-2 text-sm text-slate-600">
+              マイナビからも募集情報をご確認いただけます。
+            </p>
+            <div className="mt-6 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <a
+                href={RECRUIT_LINKS.mynavi2027}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center rounded-xl bg-white px-8 py-5 shadow-sm transition-shadow hover:shadow-md"
+              >
+                <Image
+                  src="https://job.mynavi.jp/conts/kigyo/2027/logo/banner_logo_195_60.gif"
+                  alt="マイナビ2027"
+                  width={195}
+                  height={60}
+                  unoptimized
+                />
+              </a>
+              <a
+                href={RECRUIT_LINKS.mynavi2028}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center rounded-xl bg-white px-8 py-5 shadow-sm transition-shadow hover:shadow-md"
+              >
+                <Image
+                  src="https://job.mynavi.jp/conts/kigyo/2028/logo/banner_logo_195_60.gif"
+                  alt="マイナビ2028"
+                  width={195}
+                  height={60}
+                  unoptimized
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>

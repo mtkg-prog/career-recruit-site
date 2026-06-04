@@ -48,6 +48,8 @@ export default function FinalCTASection() {
           </a>
           <a
             href={RECRUIT_LINKS.casualInterview}
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full rounded-full border-2 border-white px-7 py-4 text-base font-bold text-white transition-colors hover:bg-white/10 focus:outline-2 focus:outline-offset-2 focus:outline-white sm:w-auto md:px-9"
           >
             カジュアル面談を申し込む
@@ -58,6 +60,26 @@ export default function FinalCTASection() {
         <p className="mt-5 text-sm text-white/[0.65]">
           すぐに応募するか迷っている方も、まずはお気軽にお話しください。
         </p>
+
+        {/* エントリーリンク */}
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+          <a
+            href={RECRUIT_LINKS.entry2027}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-white/70 underline underline-offset-4 transition-colors hover:text-white"
+          >
+            2027卒エントリー
+          </a>
+          <a
+            href={RECRUIT_LINKS.entryMidCareer}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-white/70 underline underline-offset-4 transition-colors hover:text-white"
+          >
+            中途採用エントリー
+          </a>
+        </div>
       </div>
     </section>
   );

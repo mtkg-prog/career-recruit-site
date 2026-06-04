@@ -6,7 +6,6 @@ import { RECRUIT_LINKS } from "@/constants/links";
 const bp = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 // TODO: hero-01（介護現場風の画像）は企業イメージとのギャップがあるため、Hero画像差し替え候補。ビジネス寄りの画像が用意でき次第入れ替える
-// TODO: slide 3（hero-02sp）はスマホ用画像の再生成候補。再生成する場合は「顔が中央に来ない」「上部に文字を載せる余白を確保」を意識する
 const heroImages = [
   {
     src: `${bp}/images/recruit/hero-04.png`,
@@ -29,7 +28,7 @@ const heroImages = [
     srcMobile: `${bp}/images/recruit/hero-02sp.png`,
     alt: "キャリアの仕事風景 3",
     kenburns: "animate-kenburns-3",
-    mobileTop: "0rem",
+    mobileTop: "-20rem",
     mobileObjectPosition: "center 50%",
   },
   {
@@ -134,6 +133,8 @@ export default function RecruitHero() {
             </a>
             <a
               href={RECRUIT_LINKS.casualInterview}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full border border-white/60 px-6 py-3 text-center text-sm font-medium text-white/90 transition-colors hover:bg-white/15"
             >
               カジュアル面談を申し込む

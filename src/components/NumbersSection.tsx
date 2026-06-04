@@ -18,18 +18,11 @@ const numbers = [
     title: "育休・産休",
     description: "育休・産休取得率です。",
   },
-  // TODO: Googleクチコミ評価の実データ（対象拠点平均・集計時点）が確定したら、以下のカードに差し替える
-  // {
-  //   label: "REVIEW",
-  //   value: "★4.3",  // ← 実データに置き換え
-  //   title: "Googleクチコミ評価",
-  //   description: "対象拠点平均 / 2026年6月時点",  // ← 集計時点も更新
-  // }
   {
-    label: "CAREER UP",
-    value: "最短半年",
-    title: "支店長になるまでのスピード",
-    description: "早期に役割を広げるチャンスがあります。",
+    label: "REVIEW",
+    value: "★4.3",
+    title: "Google口コミ評価",
+    description: "対象拠点平均 / 2026年6月時点",
   },
   {
     label: "EMPLOYEE RATIO",

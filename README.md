@@ -42,7 +42,7 @@ Vercel の Settings > Environment Variables で以下を設定してください
 | Variable | Purpose | Example |
 |---|---|---|
 | `NEXT_PUBLIC_SITE_URL` | OGP画像・canonical URL の生成に使用。未設定だと og:image が localhost を指す | `https://recruit.example.com` |
-| `NEXT_PUBLIC_CASUAL_INTERVIEW_URL` | カジュアル面談CTAのリンク先。未設定だとページ内スクロールのみ。本番公開時は必ず設定すること | `https://docs.google.com/forms/d/e/1FAIpQLSdj427akjmsRonMHqZE0sRY8-OupKdu24KNIGGimrWq-AonHQ/viewform` |
+| `NEXT_PUBLIC_CASUAL_INTERVIEW_URL` | カジュアル面談CTAのリンク先。未設定の場合は通常応募フォーム（仮）にフォールバック。カジュアル面談専用フォーム作成後に差し替えること | `https://docs.google.com/forms/d/e/1FAIpQLSdj427akjmsRonMHqZE0sRY8-OupKdu24KNIGGimrWq-AonHQ/viewform` |
 
 ## TODO: 今後の対応予定
 
