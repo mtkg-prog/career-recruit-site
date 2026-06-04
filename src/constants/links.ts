@@ -4,16 +4,9 @@ export const RECRUIT_LINKS = {
   /** 募集職種一覧（CareerCloud） */
   jobList:
     "https://www.career-cloud.asia/mid/entry/job/offer/careerrecruit",
-  /**
-   * カジュアル面談の申し込みフォームURL。
-   *
-   * 本番公開前に Vercel 環境変数 NEXT_PUBLIC_CASUAL_INTERVIEW_URL を必ず設定すること。
-   * 未設定の場合は通常応募フォーム（仮）にフォールバックする。
-   * カジュアル面談専用フォーム作成後に差し替えること。
-   */
+  /** カジュアル面談の申し込みフォームURL（CareerCloud） */
   casualInterview:
-    process.env.NEXT_PUBLIC_CASUAL_INTERVIEW_URL ??
-    "https://docs.google.com/forms/d/e/1FAIpQLSdj427akjmsRonMHqZE0sRY8-OupKdu24KNIGGimrWq-AonHQ/viewform",
+    "https://www.career-cloud.asia/mid/form/entry/2420dd96df6b4fcb7132946341870b3f?root=11674&job=20789",
 
   /** 2027卒エントリー（CareerCloud） */
   entry2027:
