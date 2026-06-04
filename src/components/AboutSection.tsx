@@ -5,21 +5,36 @@ const bp = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const cards = [
   {
     number: "01",
-    label: "SENIOR CARE",
-    title: "介護・医療現場を支える",
-    body: "看護師・介護士などの人材サービスを通じて、人手不足に悩む介護・医療現場を支えています。",
+    title: (
+      <>
+        社会課題を、
+        <br />
+        事業で解く。
+      </>
+    ),
+    body: "介護・医療・シニア領域にある課題を、単なる支援で終わらせず、持続可能な事業として解決していく。それが、キャリアの向き合い方です。",
   },
   {
     number: "02",
-    label: "SENIOR WORK",
-    title: "年齢に関係なく働ける機会をつくる",
-    body: "働く意欲のあるシニアに、多様な就労機会を提供し、経験や意欲が社会で活きる仕組みを広げています。",
+    title: (
+      <>
+        人の可能性を、
+        <br />
+        広げる。
+      </>
+    ),
+    body: "働きたい人、支えを必要とする現場、地域社会。それぞれの可能性をつなぎ、新しい選択肢を生み出していきます。",
   },
   {
     number: "03",
-    label: "EDUCATION / NEW BUSINESS",
-    title: "人と仕組みで、新しい入口をつくる",
-    body: "資格取得支援やDX、新規事業を通じて、高齢社会を支える人と仕組みを増やしています。",
+    title: (
+      <>
+        現場の声を、
+        <br />
+        仕組みに変える。
+      </>
+    ),
+    body: "日々の現場で見えてくる課題を、サービス改善や新規事業、DXへとつなげていく。人の力と仕組みの両方で、高齢社会を前に進めます。",
   },
 ];
 
@@ -36,16 +51,16 @@ export default function AboutSection() {
         <h2 className="mt-4 text-3xl font-extrabold leading-[1.35] text-[#073B34] md:mt-5 md:text-5xl lg:text-6xl">
           高齢社会の課題に、
           <br />
-          事業で向き合う。
+          人と仕組みで向き合う。
         </h2>
 
         {/* Lead */}
         <p className="mt-6 max-w-2xl text-[15px] leading-[2.1] text-slate-700 md:mt-8 md:text-lg md:leading-[2]">
-          株式会社キャリアは、介護・医療・シニアワーク領域を中心に、
+          キャリアは、介護・医療・シニア領域にある課題を、
           <br className="hidden md:block" />
-          人材サービス、就労支援、教育、そして新しい仕組みづくりを通じて、
+          人材サービスだけでなく、教育、就労支援、新しい仕組みづくりを通じて
           <br className="hidden md:block" />
-          高齢社会の課題解決に取り組んでいます。
+          解決していく会社です。
         </p>
 
         {/* Main visual */}
@@ -77,18 +92,13 @@ export default function AboutSection() {
               key={card.number}
               className="rounded-[24px] border border-gray-200 bg-white p-6 transition-shadow hover:shadow-md md:p-8"
             >
-              <div className="flex items-center gap-3">
-                <span className="text-xs font-bold tabular-nums text-[#40916c]">
-                  {card.number}
-                </span>
-                <span className="text-[0.6rem] font-semibold tracking-[0.15em] text-slate-500">
-                  {card.label}
-                </span>
-              </div>
-              <h3 className="mt-3 text-base font-bold leading-snug text-[#073B34] md:text-lg">
+              <p className="text-3xl font-extrabold text-[#40916c]/20 md:text-4xl">
+                {card.number}
+              </p>
+              <h3 className="mt-4 text-lg font-bold leading-[1.6] text-[#073B34] md:text-xl">
                 {card.title}
               </h3>
-              <p className="mt-3 text-[0.8125rem] leading-[1.95] text-[#4b5563]">
+              <p className="mt-4 text-sm leading-[1.95] text-[#4b5563] md:text-base">
                 {card.body}
               </p>
             </div>

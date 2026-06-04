@@ -71,11 +71,9 @@ export default function BusinessSection() {
 
         {/* Lead */}
         <p className="mt-6 max-w-3xl text-base leading-[2] text-slate-700 md:mt-8 md:text-lg">
-          キャリアは、介護・医療・シニア領域を中心に、
+          介護・医療領域の人材支援、シニアの就労支援、教育・研修、新規事業・DX。
           <br className="hidden md:block" />
-          人材サービス、就労支援、教育、事業開発を通じて、
-          <br className="hidden md:block" />
-          高齢社会に必要な仕組みを広げています。
+          キャリアは複数の事業を通じて、高齢社会に必要な仕組みを広げています。
         </p>
 
         {/* Cards */}
