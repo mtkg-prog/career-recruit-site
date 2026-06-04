@@ -30,7 +30,7 @@ const heroImages = [
     alt: "キャリアの仕事風景 3",
     kenburns: "animate-kenburns-3",
     mobileTop: "0rem",
-    mobileObjectPosition: "center 15%",
+    mobileObjectPosition: "center 50%",
   },
   {
     src: `${bp}/images/recruit/hero-01.png`,
