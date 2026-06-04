@@ -1,8 +1,7 @@
 import Image from "next/image";
 import { RECRUIT_LINKS } from "@/constants/links";
 
-// TODO: 各職種に href を追加し、実際の求人詳細ページURLを設定する
-// TODO: 外部求人リンク（HRMOS / Wantedly 等）が確定したら href フィールドを有効化する
+// 個別求人URLが確定したら各カードの href を個別URLに差し替える
 const positions = [
   {
     category: "SALES / COORDINATOR",
@@ -11,6 +10,7 @@ const positions = [
       "介護・医療領域を中心に、求職者とクライアント双方に向き合い、最適なマッチングを支援する仕事です。人材不足に悩む現場と、働きたい人をつなぎ、地域の課題解決に関わります。",
     location: "全国各拠点",
     employmentType: "正社員",
+    href: RECRUIT_LINKS.jobList,
   },
   {
     category: "CORPORATE",
@@ -19,6 +19,7 @@ const positions = [
       "人事、総務、経理、労務、情報システムなど、会社全体の成長を支える仕事です。現場や事業部門がより良いサービスを届けられるよう、組織の土台づくりを担います。",
     location: "本社",
     employmentType: "正社員",
+    href: RECRUIT_LINKS.jobList,
   },
   {
     category: "PLANNING / STRATEGY",
@@ -27,6 +28,7 @@ const positions = [
       "既存事業の改善、新規事業、DX、教育支援などを通じて、高齢社会を支える仕組みをつくる仕事です。現場で得た課題を、事業や組織の進化につなげていきます。",
     location: "本社・一部リモート相談可",
     employmentType: "正社員",
+    href: RECRUIT_LINKS.jobList,
   },
 ];
 
@@ -83,11 +85,15 @@ export default function PositionsSection() {
                 </span>
               </div>
 
-              {/* TODO: 求人詳細URL確定後に a タグに戻し href を設定する */}
               <div className="mt-auto pt-6">
-                <span className="inline-block rounded-full border-2 border-gray-300 px-6 py-2.5 text-sm font-medium text-gray-400">
-                  募集要項は面談時にご案内します
-                </span>
+                <a
+                  href={job.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block rounded-full border-2 border-[#40916c] px-6 py-2.5 text-sm font-medium text-[#40916c] transition-colors hover:bg-[#40916c] hover:text-white"
+                >
+                  募集一覧で確認する
+                </a>
               </div>
             </div>
           ))}

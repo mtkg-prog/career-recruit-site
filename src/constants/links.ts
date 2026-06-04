@@ -1,6 +1,9 @@
 export const RECRUIT_LINKS = {
   /** 募集職種セクションへのアンカー */
   positions: "#positions",
+  /** 募集職種一覧（CareerCloud） */
+  jobList:
+    "https://www.career-cloud.asia/mid/entry/job/offer/careerrecruit",
   /**
    * カジュアル面談の申し込みフォームURL。
    *

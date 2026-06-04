@@ -41,10 +41,12 @@ export default function FinalCTASection() {
         {/* CTAボタン */}
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center md:mt-12">
           <a
-            href={RECRUIT_LINKS.positions}
+            href={RECRUIT_LINKS.jobList}
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full rounded-full bg-white px-7 py-4 text-base font-bold text-[#073B34] transition-colors hover:bg-white/90 focus:outline-2 focus:outline-offset-2 focus:outline-white sm:w-auto md:px-9"
           >
-            募集職種を見る
+            募集職種一覧を見る
           </a>
           <a
             href={RECRUIT_LINKS.casualInterview}

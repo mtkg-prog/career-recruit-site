@@ -129,7 +129,7 @@ export default function RecruitHero() {
               href={RECRUIT_LINKS.positions}
               className="rounded-full bg-[#40916c] px-6 py-3 text-center text-sm font-medium text-white transition-colors hover:bg-[#358a60]"
             >
-              募集職種を見る
+              募集職種を確認する
             </a>
             <a
               href={RECRUIT_LINKS.casualInterview}
