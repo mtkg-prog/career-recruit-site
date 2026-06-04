@@ -26,7 +26,7 @@ const heroImages = [
     srcMobile: `${bp}/images/recruit/hero-02sp.png`,
     alt: "キャリアの仕事風景 3",
     kenburns: "animate-kenburns-3",
-    mobileTop: "-18rem",
+    mobileTop: "-5rem",
   },
   {
     src: `${bp}/images/recruit/hero-01.png`,
