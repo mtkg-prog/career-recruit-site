@@ -12,9 +12,9 @@ export default function IssueSection() {
 
         {/* Main heading */}
         <h2 className="mt-4 text-[1.75rem] font-bold leading-[1.45] text-[#073B34] md:mt-5 md:text-4xl md:leading-[1.4] lg:text-5xl lg:leading-[1.35]">
-          人の力と仕組みで、
+          高齢社会は、
           <br />
-          高齢社会をアップデート。
+          まだ変えられる。
         </h2>
 
         {/* Lead copy */}
@@ -32,9 +32,9 @@ export default function IssueSection() {
         {/* Closing copy */}
         <div className="mt-14 border-t border-slate-200/70 pt-10 md:mt-20 md:pt-14">
           <p className="text-xl font-bold leading-[1.6] text-[#073B34] md:text-3xl md:leading-[1.5] lg:text-4xl">
-            ともに、
-            <br className="md:hidden" />
-            高齢社会の未来を変えよう。
+            自分たちの未来を、
+            <br />
+            自分たちの手で良くしていく。
           </p>
         </div>
       </div>
