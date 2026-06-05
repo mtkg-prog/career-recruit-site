@@ -7,15 +7,29 @@ const people = [
     role: "経営企画・事業企画",
     copy: (
       <>
-        現場の課題を、
+        現場の違和感を見過ごさず、
         <br />
-        新しい仕組みに変えていく。
+        仕組みで変えていく。
       </>
     ),
-    body: "既存事業の改善や新規事業、DXを通じて、課題解決の仕組みをつくります。人と事業の力で、高齢社会を前に進める仕事です。",
+    body: "日々の事業で見えてくる課題を受け止め、サービス改善や新しい仕組みづくりにつなげていきます。",
     pcImage: `${bp}/images/recruit/people/people-planning-pc.png`,
     spImage: `${bp}/images/recruit/people/people-planning-sp.png`,
     alt: "経営企画・事業企画として仕組みづくりに向き合う社員",
+  },
+  {
+    role: "営業職／人材コーディネーター",
+    copy: (
+      <>
+        一人ひとりの声を聞き、
+        <br />
+        できることを一緒に探す。
+      </>
+    ),
+    body: "求職者と現場の双方に向き合い、希望や課題を丁寧に受け止めながら、より良いマッチングを支えます。",
+    pcImage: `${bp}/images/recruit/people/people-senior-work-pc.png`,
+    spImage: `${bp}/images/recruit/people/people-senior-work-sp.png`,
+    alt: "営業職／人材コーディネーターとして就労相談に向き合う社員",
   },
   {
     role: "営業職／人材コーディネーター",
@@ -26,38 +40,24 @@ const people = [
         人材サービスから広げる。
       </>
     ),
-    body: "働きたいシニアと企業をつなぎ、社会参加の機会を広げています。経験や意欲が活きる場を増やすことが、私たちの役割です。",
-    pcImage: `${bp}/images/recruit/people/people-senior-work-pc.png`,
-    spImage: `${bp}/images/recruit/people/people-senior-work-sp.png`,
-    alt: "営業職／人材コーディネーターとして就労相談に向き合う社員",
-  },
-  {
-    role: "営業職／人材コーディネーター",
-    copy: (
-      <>
-        一人ひとりの希望に向き合い、
-        <br />
-        働く一歩を支える。
-      </>
-    ),
-    body: "求職者の経験や希望を丁寧に聞き、現場との最適な出会いをつくる仕事です。誰かの働き方が前に進む瞬間に、やりがいを感じます。",
+    body: "シニア領域の就労支援も、相手の声を聞くことから始まります。一人ひとりに合った働き方を、チームで考えていきます。",
     pcImage: `${bp}/images/recruit/people/people-coordinator-pc.png`,
     spImage: `${bp}/images/recruit/people/people-coordinator-sp.png`,
     alt: "営業職／人材コーディネーターとして求職者に向き合う社員",
   },
   {
-    role: "営業職／人材コーディネーター",
+    role: "支店運営・マネジメント",
     copy: (
       <>
-        地域の現場に入り込み、
+        安心して挑戦できる土台を、
         <br />
-        課題を一緒に解決する。
+        チームで支える。
       </>
     ),
-    body: "介護・医療現場の課題を聞き、必要な人材や支援を届けます。地域ごとのニーズに向き合いながら、現場を支える仕事です。",
+    body: "現場や事業部門が力を発揮できるよう、制度、仕組み、日々の運用を整え、組織全体を支えます。",
     pcImage: `${bp}/images/recruit/people/people-sales-pc.png`,
     spImage: `${bp}/images/recruit/people/people-sales-sp.png`,
-    alt: "営業職／人材コーディネーターとして提案に向き合う社員",
+    alt: "支店運営・マネジメントとしてチームを支える社員",
   },
 ];
 
@@ -79,9 +79,9 @@ export default function PeopleSection() {
 
         {/* Lead */}
         <p className="mt-6 max-w-3xl text-base leading-[2] text-slate-700 md:mt-8 md:text-lg">
-          営業、人材コーディネート、企画、コーポレート。
+          事業を動かしているのは、一人ひとりの課題に向き合う社員たち。
           <br className="hidden md:block" />
-          キャリアで働く人たちは、それぞれの立場から高齢社会の課題に向き合っています。
+          求職者、現場、地域、組織に向き合いながら、それぞれの役割で挑戦しています。
         </p>
 
         {/* Cards */}

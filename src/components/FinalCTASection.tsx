@@ -24,18 +24,16 @@ export default function FinalCTASection() {
 
         {/* メインコピー */}
         <h2 className="mt-8 text-3xl font-extrabold leading-[1.4] text-white md:mt-10 md:text-6xl">
-          ともに、
+          社会課題に向き合う仕事を、
           <br />
-          高齢社会の未来を変えよう。
+          次はあなたの一歩から。
         </h2>
 
         {/* 本文 */}
         <p className="mx-auto mt-6 max-w-3xl text-base leading-[2] text-white/80 md:mt-8 md:text-xl">
-          人材、事業、仕組みづくり。
+          目の前の声に誠実に向き合い、チームで前に進める。
           <br className="hidden md:block" />
-          あなたの経験や想いが、高齢社会を前に進める力になります。
-          <br className="hidden md:block" />
-          まずは、キャリアの仕事について知るところから始めてみませんか。
+          その積み重ねが、高齢社会の未来を変えていきます。
         </p>
 
         {/* CTAボタン */}

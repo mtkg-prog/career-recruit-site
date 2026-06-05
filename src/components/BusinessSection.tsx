@@ -113,7 +113,7 @@ export default function BusinessSection() {
         <p className="mx-auto mt-14 max-w-2xl text-center text-sm leading-[2] text-slate-500 md:mt-16 md:text-base">
           事業の最前線から、組織を支える本部機能、仕組みをつくる企画職まで。
           <br className="hidden md:block" />
-          それぞれの役割が、高齢社会の未来を前に進めています。
+          それぞれの立場で声を受け止め、チームで課題を前に進めています。
         </p>
       </div>
     </section>
