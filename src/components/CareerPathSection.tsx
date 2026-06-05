@@ -1,27 +1,48 @@
 const steps = [
   {
     label: "STEP 01",
-    title: "現場を知る",
+    title: "仕事を知る",
     description:
-      "求職者やクライアントに向き合い、人材サービスの基本を学びます。\n人と仕事をつなぐ実感を持ちながら、課題解決の土台を身につけます。",
+      "求職者、現場、地域の課題を知り、キャリアの事業や仕事の基本を学びます。",
   },
   {
     label: "STEP 02",
-    title: "成果をつくる",
+    title: "担当領域を持つ",
     description:
-      "担当領域を持ち、求職者・現場・地域の課題に向き合います。\n自分の提案や行動が、現場の安心や誰かの働き方につながる経験を重ねます。",
+      "担当する顧客や求職者に向き合い、自分のミッションを持って成果につなげていきます。",
   },
   {
     label: "STEP 03",
     title: "チームを動かす",
     description:
-      "リーダー、支店長、マネージャーとして、チームで成果をつくる役割へ。\nメンバー育成や拠点運営を通じて、より大きな課題解決に挑みます。",
+      "メンバー育成や支店運営など、チームで成果をつくる役割へ挑戦します。",
   },
   {
     label: "STEP 04",
     title: "事業をつくる",
     description:
-      "新規事業、DX、教育支援、本部企画など、会社全体の仕組みづくりにも挑戦できます。\n現場で得た気づきを、事業の進化につなげていくキャリアです。",
+      "現場で見えてきた課題をもとに、事業改善、新規事業、DXなどに関わっていきます。",
+  },
+];
+
+const evaluationCards = [
+  {
+    label: "MISSION",
+    title: "ミッションの難易度を大切にする",
+    description:
+      "担うミッションの難易度や責任の大きさを踏まえ、役割や評価を考えます。目の前の業務だけでなく、どんな課題に向き合うかを大切にしています。",
+  },
+  {
+    label: "FAIR CHANCE",
+    title: "年齢・性別・社歴だけで決めない",
+    description:
+      "若手でも中途入社でも、課題に向き合い行動する人には、役割を広げる機会があります。一人ひとりの挑戦を見つめる風土があります。",
+  },
+  {
+    label: "CAREER UP",
+    title: "挑戦が、次の役割につながる",
+    description:
+      "担当領域、リーダー、支店運営、企画職、新規事業など、挑戦の積み重ねが次のキャリアにつながります。役割やミッションに応じて、待遇にも反映されていきます。",
   },
 ];
 
@@ -36,16 +57,18 @@ export default function CareerPathSection() {
 
         {/* Heading */}
         <h2 className="mt-4 text-3xl font-extrabold leading-[1.35] text-[#073B34] md:mt-5 md:text-6xl">
-          挑戦の先に、
+          挑戦の数だけ、
           <br />
-          広がるキャリア。
+          キャリアは広がる。
         </h2>
 
         {/* Lead */}
         <p className="mt-6 max-w-3xl text-base leading-[2] text-slate-700 md:mt-8 md:text-lg">
-          キャリアには、現場に向き合う仕事から、支店運営、マネジメント、新規事業、本部職まで、
+          キャリアでは、年齢や社歴だけで可能性を決めるのではなく、
           <br className="hidden md:block" />
-          一人ひとりの挑戦に応じて広がるキャリアがあります。
+          一人ひとりが掲げるミッションの難易度や、課題に向き合う姿勢を大切にしています。
+          <br className="hidden md:block" />
+          担う役割や責任が広がるほど、キャリアアップや待遇にもつながっていきます。
         </p>
 
         {/* Steps — PC: 4列グリッド / SP: タイムライン */}
@@ -104,6 +127,40 @@ export default function CareerPathSection() {
                     {step.description}
                   </p>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 評価・キャリアアップの考え方 */}
+        <div className="mt-16 md:mt-20">
+          <h3 className="text-center text-2xl font-bold leading-[1.5] text-[#073B34] md:text-3xl">
+            評価・キャリアアップの考え方
+          </h3>
+
+          <p className="mx-auto mt-5 max-w-3xl text-center text-base leading-[2] text-slate-700 md:mt-6 md:text-lg">
+            一人ひとりが掲げるミッションの難易度や、課題に向き合う姿勢、
+            <br className="hidden md:block" />
+            成果を踏まえて、役割や評価を考えています。
+          </p>
+
+          <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-6">
+            {evaluationCards.map((card) => (
+              <div
+                key={card.label}
+                className="rounded-[24px] border border-gray-200 bg-white p-6 transition-shadow hover:shadow-md md:p-8"
+              >
+                <p className="text-xs font-semibold tracking-[0.2em] text-[#40916c]">
+                  {card.label}
+                </p>
+
+                <h4 className="mt-4 text-lg font-bold leading-[1.6] text-[#073B34] md:text-xl">
+                  {card.title}
+                </h4>
+
+                <p className="mt-4 text-sm leading-[1.9] text-slate-600 md:text-base">
+                  {card.description}
+                </p>
               </div>
             ))}
           </div>
