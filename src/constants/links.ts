@@ -11,6 +11,9 @@ export const RECRUIT_LINKS = {
   /** 2027卒エントリー（CareerCloud） */
   entry2027:
     "https://www.career-cloud.asia/27/form/entryb/index/67c7f97e9a6d87564a5bcf9803107fca",
+  /** 2028卒エントリー（CareerCloud） */
+  entry2028:
+    "https://www.career-cloud.asia/28/form/entryb/index/916773ceec72ad53249d2b4dc0748571",
   /** 中途採用エントリー（CareerCloud） */
   entryMidCareer:
     "https://www.career-cloud.asia/mid/form/entry/2420dd96df6b4fcb7132946341870b3f?root=11674&job=20789",

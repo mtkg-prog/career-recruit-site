@@ -72,6 +72,14 @@ export default function FinalCTASection() {
             2027卒エントリー
           </a>
           <a
+            href={RECRUIT_LINKS.entry2028}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-white/70 underline underline-offset-4 transition-colors hover:text-white"
+          >
+            2028卒エントリー
+          </a>
+          <a
             href={RECRUIT_LINKS.entryMidCareer}
             target="_blank"
             rel="noopener noreferrer"

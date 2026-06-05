@@ -133,6 +133,14 @@ export default function PositionsSection() {
                 2027卒エントリー
               </a>
               <a
+                href={RECRUIT_LINKS.entry2028}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full rounded-full bg-[#40916c] px-8 py-4 text-center text-base font-medium text-white transition-colors hover:bg-[#358a60] sm:w-auto"
+              >
+                2028卒エントリー
+              </a>
+              <a
                 href={RECRUIT_LINKS.entryMidCareer}
                 target="_blank"
                 rel="noopener noreferrer"
