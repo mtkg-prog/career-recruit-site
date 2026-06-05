@@ -34,7 +34,7 @@ export default function IssueSection() {
           <p className="text-xl font-bold leading-[1.6] text-[#073B34] md:text-3xl md:leading-[1.5] lg:text-4xl">
             自分たちの未来を、
             <br />
-            自分たちの手で良くしていく。
+            自分たちでアップデート。
           </p>
         </div>
       </div>

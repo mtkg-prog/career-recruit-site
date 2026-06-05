@@ -26,7 +26,7 @@ export default function FinalCTASection() {
         <h2 className="mt-8 text-3xl font-extrabold leading-[1.4] text-white md:mt-10 md:text-6xl">
           自分たちの未来を、
           <br />
-          自分たちの手で良くしていく。
+          自分たちでアップデート。
         </h2>
 
         {/* 本文 */}
