@@ -1,15 +1,15 @@
 const cultures = [
   {
-    label: "01 / UPDATE",
-    title: "社会課題に向き合い、\n自分自身もアップデートし続ける。",
-    description:
-      "求職者、現場、地域、事業。\nそれぞれの課題に真摯に向き合い、周囲の声を素直に受け止める。\n誠実さを積み重ね、次の成長へと変えていきます。",
-  },
-  {
-    label: "02 / TEAM",
+    label: "01 / TEAM",
     title: "一人で抱えず、\nチームで向き合う。",
     description:
-      "求職者や現場の課題は、一人で解決できるものばかりではありません。\n困ったときに相談し、知恵を出し合い、チームで前に進めることを大切にしています。",
+      "難しい課題ほど、一人だけでは解決できません。\n困ったときに相談し、知恵を出し合いながら、チームで前に進めることを大切にしています。",
+  },
+  {
+    label: "02 / INTEGRITY",
+    title: "声を受け止め、\n誠実に向き合う。",
+    description:
+      "求職者、現場、地域、事業。\nそれぞれの課題に真摯に向き合い、周囲の声やアドバイスを素直に受け止めます。\n誠実な積み重ねを、次の成長へと変えていきます。",
   },
   {
     label: "03 / POSITIVE ACTION",
@@ -30,16 +30,18 @@ export default function CultureSection() {
 
         {/* Heading */}
         <h2 className="mt-4 text-3xl font-extrabold leading-[1.35] text-[#073B34] md:mt-5 md:text-6xl">
-          変化を起こす人を、
+          社会課題に向き合い、
           <br />
-          ひとりにしない。
+          自分自身もアップデート。
         </h2>
 
         {/* Lead */}
         <p className="mt-6 max-w-3xl text-base leading-[2] text-slate-700 md:mt-8 md:text-lg">
-          キャリアの仕事は、求職者、現場、地域、事業の課題に向き合う仕事です。
+          求職者、現場、地域、事業の課題に真摯に向き合う。
           <br className="hidden md:block" />
-          だからこそ、真摯に課題を受け止め、チームで考え、まず動き、より良い形へ変えていく文化を大切にしています。
+          周囲の声を受け止め、チームで考え、まず動く。
+          <br className="hidden md:block" />
+          その積み重ねが、高齢社会と自分自身をアップデートします。
         </p>
 
         {/* Cards */}
