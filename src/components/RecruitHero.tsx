@@ -132,12 +132,12 @@ export default function RecruitHero() {
               募集職種を確認する
             </a>
             <a
-              href={RECRUIT_LINKS.casualInterview}
+              href={RECRUIT_LINKS.entryMidCareer}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full border border-white/60 px-6 py-3 text-center text-sm font-medium text-white/90 transition-colors hover:bg-white/15"
             >
-              カジュアル面談を申し込む
+              中途採用エントリー
             </a>
           </div>
         </div>

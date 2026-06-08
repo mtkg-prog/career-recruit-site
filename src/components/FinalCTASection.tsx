@@ -47,12 +47,12 @@ export default function FinalCTASection() {
             募集職種一覧を見る
           </a>
           <a
-            href={RECRUIT_LINKS.casualInterview}
+            href={RECRUIT_LINKS.entryMidCareer}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full rounded-full border-2 border-white px-7 py-4 text-base font-bold text-white transition-colors hover:bg-white/10 focus:outline-2 focus:outline-offset-2 focus:outline-white sm:w-auto md:px-9"
           >
-            カジュアル面談を申し込む
+            中途採用エントリー
           </a>
         </div>
 
@@ -78,14 +78,6 @@ export default function FinalCTASection() {
             className="text-sm text-white/70 underline underline-offset-4 transition-colors hover:text-white"
           >
             2028卒エントリー
-          </a>
-          <a
-            href={RECRUIT_LINKS.entryMidCareer}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-white/70 underline underline-offset-4 transition-colors hover:text-white"
-          >
-            中途採用エントリー
           </a>
         </div>
       </div>

@@ -6,6 +6,7 @@ const navLinks = [
   { label: "会社を知る", href: "#about" },
   { label: "仕事を知る", href: "#business" },
   { label: "人を知る", href: "#people" },
+  { label: "働き方を知る", href: "#numbers" },
   { label: "募集職種", href: "#positions" },
   { label: "FAQ", href: "#faq" },
 ];

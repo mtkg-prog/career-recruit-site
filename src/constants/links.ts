@@ -4,10 +4,6 @@ export const RECRUIT_LINKS = {
   /** 募集職種一覧（CareerCloud） */
   jobList:
     "https://www.career-cloud.asia/mid/entry/job/offer/careerrecruit",
-  /** カジュアル面談の申し込みフォームURL（CareerCloud） */
-  casualInterview:
-    "https://www.career-cloud.asia/mid/form/entry/2420dd96df6b4fcb7132946341870b3f?root=11674&job=20789",
-
   /** 2027卒エントリー（CareerCloud） */
   entry2027:
     "https://www.career-cloud.asia/27/form/entryb/index/67c7f97e9a6d87564a5bcf9803107fca",

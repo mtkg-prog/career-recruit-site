@@ -109,12 +109,12 @@ export default function PositionsSection() {
 
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <a
-              href={RECRUIT_LINKS.casualInterview}
+              href={RECRUIT_LINKS.entryMidCareer}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full rounded-full bg-[#40916c] px-8 py-4 text-center text-base font-medium text-white transition-colors hover:bg-[#358a60] sm:w-auto"
             >
-              カジュアル面談を申し込む
+              中途採用エントリー
             </a>
           </div>
 
@@ -147,14 +147,6 @@ export default function PositionsSection() {
                 className="w-full rounded-full bg-[#40916c] px-8 py-4 text-center text-base font-medium text-white transition-colors hover:bg-[#358a60] sm:w-auto"
               >
                 中途採用エントリー
-              </a>
-              <a
-                href={RECRUIT_LINKS.casualInterview}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full rounded-full border-2 border-[#40916c] px-8 py-4 text-center text-base font-medium text-[#40916c] transition-colors hover:bg-[#40916c] hover:text-white sm:w-auto"
-              >
-                カジュアル面談を申し込む
               </a>
             </div>
           </div>
