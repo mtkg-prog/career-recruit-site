@@ -19,6 +19,12 @@ export const RECRUIT_LINKS = {
   /** マイナビ2028 */
   mynavi2028: "https://job.mynavi.jp/28/pc/search/corp97333/outline.html",
 
+  /** コーポレートサイト */
+  corporate: "https://www.careergift.co.jp/",
+  /** プライバシーポリシー（PDF） */
+  privacyPolicy:
+    "https://www.careergift.co.jp/privacy/%E5%80%8B%E4%BA%BA%E6%83%85%E5%A0%B1%E4%BF%9D%E8%AD%B7%E6%96%B9%E9%87%9D_20221117.pdf",
+
   /** 社外広報 Instagram */
   instagram: "https://www.instagram.com/career_hr1/",
   /** 社外広報 note */

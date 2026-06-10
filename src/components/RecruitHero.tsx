@@ -10,7 +10,7 @@ const heroImages = [
   {
     src: `${bp}/images/recruit/hero-04.png`,
     srcMobile: `${bp}/images/recruit/hero-04sp.png`,
-    alt: "",
+    alt: "明るいオフィスを歩く3人の社員",
     kenburns: "animate-kenburns-1",
     mobileTop: "-5rem",
     mobileObjectPosition: "center 30%",
@@ -18,7 +18,7 @@ const heroImages = [
   {
     src: `${bp}/images/recruit/hero-03.png`,
     srcMobile: `${bp}/images/recruit/hero-03sp.png`,
-    alt: "",
+    alt: "ホワイトボードの前でミーティングする社員たち",
     kenburns: "animate-kenburns-2",
     mobileTop: "-23rem",
     mobileObjectPosition: "center 30%",
@@ -26,7 +26,7 @@ const heroImages = [
   {
     src: `${bp}/images/recruit/hero-02.png`,
     srcMobile: `${bp}/images/recruit/hero-02sp.png`,
-    alt: "",
+    alt: "ノートパソコンを使いながら打ち合わせをする2人の社員",
     kenburns: "animate-kenburns-3",
     mobileTop: "-20rem",
     mobileObjectPosition: "center 50%",
@@ -34,7 +34,7 @@ const heroImages = [
   {
     src: `${bp}/images/recruit/hero-01.png`,
     srcMobile: `${bp}/images/recruit/hero-01sp.png`,
-    alt: "",
+    alt: "高齢者と笑顔で向き合う介護スタッフ",
     kenburns: "animate-kenburns-4",
     mobileTop: "-13rem",
     mobileObjectPosition: "center 30%",

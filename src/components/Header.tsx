@@ -36,14 +36,16 @@ export default function Header() {
         {/* Logo */}
         <a
           href="#hero"
-          className={`text-lg font-bold tracking-wide transition-colors duration-300 ${
+          className={`flex flex-col transition-colors duration-300 ${
             isScrolled || isOpen ? "text-[#1a3a2a]" : "text-white"
           }`}
         >
-          <span className="text-sm font-medium block leading-tight">
+          <span className="text-base md:text-lg font-bold leading-tight">
             株式会社キャリア
           </span>
-          <span className="text-xs tracking-widest">RECRUIT</span>
+          <span className="mt-0.5 text-[0.65rem] md:text-xs tracking-[0.25em] font-medium opacity-70">
+            RECRUIT
+          </span>
         </a>
 
         {/* Desktop nav */}
